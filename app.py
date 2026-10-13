@@ -37,11 +37,8 @@ if st.button("Ask"):
         try:
 
             response = requests.post(
-                f{"BACKEND_URL}/ask",
-                json={
-                    "question": question
-                }
-            )
+                f"{BACKEND_URL}/ask",
+                json={"question": question})
             if response.status_code == 200:
 
                 result = response.json()
