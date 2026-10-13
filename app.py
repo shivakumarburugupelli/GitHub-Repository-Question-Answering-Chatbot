@@ -15,7 +15,7 @@ if github_url:
 if st.button("load repository"):
     if github_url:
         try:
-            BACKEND_URL = "https://your-service-name.onrender.com"
+            BACKEND_URL = "https://github-repository-question-answering-5umg.onrender.com/"
             response = requests.post(f"{BACKEND_URL}/load",json={"github_url": github_url})
             
             if response.status_code == 200:
