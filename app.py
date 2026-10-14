@@ -15,8 +15,7 @@ if github_url:
 if st.button("load repository"):
     if github_url:
         try:
-            BACKEND_URL = "https://github-repository-question-answering.onrender.com"
-            response = requests.post(f"{BACKEND_URL}/load",json={"github_url": github_url})
+            response = requests.post("http://127.0.0.1:8000/load",json={"github_url": github_url})
             
             if response.status_code == 200:
                 result=response.json()
@@ -37,7 +36,7 @@ if st.button("Ask"):
         try:
 
             response = requests.post(
-                f"{BACKEND_URL}/ask",
+               "http://127.0.0.1:8000/load",
                 json={"question": question})
             if response.status_code == 200:
 
