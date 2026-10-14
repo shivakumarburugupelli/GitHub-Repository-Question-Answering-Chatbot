@@ -36,7 +36,7 @@ if st.button("Ask"):
         try:
 
             response = requests.post(
-               "http://127.0.0.1:8000/load",
+               "http://127.0.0.1:8000/ask",
                 json={"question": question})
             if response.status_code == 200:
 
